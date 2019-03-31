@@ -40,7 +40,8 @@ export default {
   },
   data() {
     return {
-      activeName: "recommend"
+      activeName: "recommend",
+      questions: []
     };
   },
   methods: {
@@ -61,8 +62,11 @@ export default {
       });
     }
   },
-  mounted() {
+  async mounted() {
     // this.createQuestion();
+
+    let { data } = await this.axios.get("/questions");
+    this.questions = data.data;
   }
 };
 </script>

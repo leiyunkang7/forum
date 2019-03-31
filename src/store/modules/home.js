@@ -12,7 +12,7 @@ const getters = {
 // actions
 const actions = {
   async findQuestion({ commit }) {
-    let { data } = await Vue.axios.get("/question");
+    let { data } = await Vue.axios.get("/questions");
 
     commit("questions", data);
   }
