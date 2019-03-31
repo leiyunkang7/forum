@@ -19,6 +19,9 @@ const _axios = axios.create(config);
 _axios.interceptors.request.use(
   function(config) {
     // Do something before request is sent
+    if (config.url) {
+      config.headers["x-csrf-token"] = "OvleVLbT_c-meVk-TR2YEbb_";
+    }
     return config;
   },
   function(error) {

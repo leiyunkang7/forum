@@ -14,6 +14,12 @@ export default new Router({
       component: Home
     },
     {
+      path: "/question/:questionId",
+      name: "question",
+      component: () =>
+        import(/* webpackChunkName: "me" */ "./views/question/main.vue")
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting
