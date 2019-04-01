@@ -21,6 +21,7 @@
           </a>
         </div>
       </el-card>
+      <Sidebar />
     </el-aside>
   </div>
 </template>
@@ -30,13 +31,15 @@ import { mapActions } from "vuex";
 import Recommend from "./recommend.vue";
 import Follow from "./follow.vue";
 import Hot from "./hot.vue";
+import Sidebar from "./sidebar.vue";
 
 export default {
   name: "Home",
   components: {
     Recommend,
     Follow,
-    Hot
+    Hot,
+    Sidebar
   },
   data() {
     return {
@@ -103,6 +106,10 @@ export default {
         color: #175199;
       }
     }
+  }
+
+  .box-card {
+    margin-bottom: 10px;
   }
 }
 </style>
