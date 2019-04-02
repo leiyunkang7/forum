@@ -19,7 +19,7 @@ module.exports = {
       .set("assets", resolve("src/assets"))
       .set("components", resolve("src/components"))
       .set("layout", resolve("src/layout"))
-      .set("base", resolve("src/base"))
+      .set("api", resolve("src/api"))
       .set("static", resolve("src/static"));
   },
 

@@ -9,15 +9,16 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
+      path: "/:tab?",
       name: "home",
-      component: Home
+      component: Home,
+      props: true
     },
     {
       path: "/question/:questionId",
       name: "question",
       component: () =>
-        import(/* webpackChunkName: "me" */ "./views/question/main.vue")
+        import(/* webpackChunkName: "me" */ "./views/question/index.vue")
     },
     {
       path: "/about",

@@ -28,10 +28,10 @@
 
 <script>
 import { mapActions } from "vuex";
-import Recommend from "./recommend.vue";
-import Follow from "./follow.vue";
-import Hot from "./hot.vue";
-import Sidebar from "./sidebar.vue";
+import Recommend from "./recommend/index.vue";
+import Follow from "./follow/index.vue";
+import Hot from "./hot";
+import Sidebar from "./sidebar";
 
 export default {
   name: "Home",
@@ -41,9 +41,25 @@ export default {
     Hot,
     Sidebar
   },
+  props: {
+    tab: {
+      type: String,
+      default: "recommend"
+    }
+  },
+  computed: {
+    activeName: {
+      get() {
+        return this.tab;
+      },
+      set(val) {
+        this.$router.push({ name: "home", params: { tab: val } });
+      }
+    }
+  },
   data() {
     return {
-      activeName: "recommend",
+      // activeName: "recommend",
       questions: []
     };
   },

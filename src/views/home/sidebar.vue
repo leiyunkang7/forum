@@ -29,6 +29,7 @@ export default {};
       justify-content: space-between;
       align-items: center;
       padding-right: 20px;
+      cursor: pointer;
       &:hover {
         background: #f6f6f6;
         color: #76839b;

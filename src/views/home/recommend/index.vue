@@ -10,7 +10,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import QuestionItem from "components/home/question-item.vue";
+import QuestionItem from "../components/question-item.vue";
 
 export default {
   name: "Recommend",
