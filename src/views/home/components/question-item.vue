@@ -1,8 +1,8 @@
 <template>
   <div class="question-item">
-    <router-link :to="`/question/${question.question_id}`">
-      {{ question.question_content }}
-    </router-link>
+    <router-link :to="`/question/${question.question_id}`">{{
+      question.question_content
+    }}</router-link>
     <div class="content">
       <img v-show="question.preview" :src="question.preview" alt />
       <div class="description">{{ question.pre_content }}</div>
@@ -13,8 +13,22 @@
         <button type="button">↓</button>
       </span>
       <button type="button">{{ question.comments_count }}条评论</button>
-      <button type="button">分享</button> <button type="button">收藏</button>
-      <button type="button">感谢</button> <button type="button">...</button>
+      <button type="button">分享</button>
+      <button type="button">收藏</button>
+      <button type="button">感谢</button>
+      <el-popover
+        popper-class="more-popper"
+        placement="bottom"
+        trigger="click"
+        width="96"
+      >
+        <div class="buttons-wrapper">
+          <button type="button">没有帮助</button>
+          <button type="button">举报</button>
+          <button type="button">不感兴趣</button>
+        </div>
+        <button class="more-btn" slot="reference" type="button">...</button>
+      </el-popover>
     </div>
   </div>
 </template>
@@ -41,6 +55,7 @@ export default {
 .question-item {
   padding: 20px 0;
   border-bottom: 1px solid #f0f2f7;
+
   a {
     text-decoration: none;
     font-size: 18px;
@@ -86,7 +101,8 @@ export default {
         margin-right: 5px;
       }
     }
-    > button {
+    > button,
+    .more-btn {
       display: inline-block;
       padding: 0 16px;
       font-size: 14px;
@@ -102,10 +118,43 @@ export default {
       border-radius: 0;
       margin-left: 24px;
       font-size: 14px;
+      vertical-align: sub;
       &:hover {
         color: #76839b;
       }
     }
+  }
+}
+</style>
+
+<style lang="less">
+.more-popper {
+  padding: 6px 0 !important;
+  min-width: 96px !important;
+  button {
+    height: auto;
+    padding: 0;
+    line-height: inherit;
+    background-color: transparent;
+    background: none;
+    border: none;
+    border-radius: 0;
+    display: block;
+    padding: 0 20px;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 40px;
+    font-size: 14px;
+    color: #8590a6;
+    &:hover {
+      background: #f6f6f6;
+      color: #76839b;
+    }
+  }
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

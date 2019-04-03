@@ -2,9 +2,15 @@
   <div class="forum-home">
     <el-main>
       <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="推荐" name="recommend"> <Recommend /> </el-tab-pane>
-        <el-tab-pane label="关注" name="follow"> <Follow /> </el-tab-pane>
-        <el-tab-pane label="热榜" name="hot"> <Hot /> </el-tab-pane>
+        <el-tab-pane label="推荐" name="recommend">
+          <Recommend />
+        </el-tab-pane>
+        <el-tab-pane label="关注" name="follow">
+          <Follow />
+        </el-tab-pane>
+        <el-tab-pane label="热榜" name="hot">
+          <Hot />
+        </el-tab-pane>
       </el-tabs>
     </el-main>
     <el-aside width="300px">
@@ -21,7 +27,7 @@
           </a>
         </div>
       </el-card>
-      <Sidebar />
+      <Sidebar :class="{ 'is-fixed': isFixed }" />
     </el-aside>
   </div>
 </template>
@@ -60,7 +66,8 @@ export default {
   data() {
     return {
       // activeName: "recommend",
-      questions: []
+      questions: [],
+      isFixed: false
     };
   },
   methods: {
@@ -79,13 +86,26 @@ export default {
         question_user_id: 1,
         question_content: "提问一"
       });
+    },
+
+    handleScroll() {
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      this.isFixed = scrollTop >= 100;
     }
   },
   async mounted() {
     // this.createQuestion();
 
+    window.addEventListener("scroll", this.handleScroll, true);
+
     let { data } = await this.axios.get("/questions");
     this.questions = data.data;
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
@@ -126,6 +146,12 @@ export default {
 
   .box-card {
     margin-bottom: 10px;
+  }
+
+  .is-fixed {
+    position: fixed;
+    top: 70px; // 44px是导航标题头的高度
+    z-index: 999;
   }
 }
 </style>

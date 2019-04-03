@@ -1,13 +1,29 @@
 <template>
   <el-card class="sidebar">
     <ul>
-      <li><a href>我的收藏</a></li>
-      <li><a href>我关注的问题</a> <span class="number">26</span></li>
-      <li><a href>我的邀请</a> <span class="number">227</span></li>
-      <li><a href>我的余额</a></li>
-      <li><a href>我的礼券</a></li>
-      <li><a href>站务中心</a></li>
-      <li><a href>版权服务中心</a></li>
+      <li>
+        <a href>我的收藏</a>
+      </li>
+      <li>
+        <a href>我关注的问题</a>
+        <span class="number">26</span>
+      </li>
+      <li>
+        <a href>我的邀请</a>
+        <span class="number">227</span>
+      </li>
+      <li>
+        <a href>我的余额</a>
+      </li>
+      <li>
+        <a href>我的礼券</a>
+      </li>
+      <li>
+        <a href>站务中心</a>
+      </li>
+      <li>
+        <a href>版权服务中心</a>
+      </li>
     </ul>
   </el-card>
 </template>
@@ -19,7 +35,7 @@ export default {};
 <style lang="less" scoped>
 .sidebar {
   margin-bottom: 10px;
-
+  width: 300px;
   ul {
     list-style: none;
     padding: 8px 0;
