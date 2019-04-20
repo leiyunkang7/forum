@@ -12,6 +12,7 @@ Mock.mock(
           create_date: "@datetime",
           voteup_count: "@natural(0, 1000000)",
           pre_content: "@cparagraph",
+          content: "@cparagraph(200, 2000)",
           "preview|0-1": "@image('400x224', @hex, img)",
           comments_count: "@natural(0, 10000)"
         }

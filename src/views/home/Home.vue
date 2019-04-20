@@ -122,6 +122,7 @@ export default {
   width: 700px;
 }
 .el-aside {
+  overflow-x: hidden;
   .global-write-nav {
     display: flex;
     justify-content: space-around;
