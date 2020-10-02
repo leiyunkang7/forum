@@ -1,29 +1,5 @@
-# hello-vue3-ts
+# vue 3 + typescript + ant-design-vue
 
-## Project setup
-```
-yarn install
-```
+https://vue3js.cn/
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://2x.antdv.com/docs/vue/introduce-cn/
