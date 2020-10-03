@@ -30,4 +30,8 @@ export default class Set {
   clear() {
     this.items = {}
   }
+
+  size() {
+    return Object.keys(this.items).length
+  }
 }
