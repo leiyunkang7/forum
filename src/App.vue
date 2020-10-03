@@ -47,6 +47,7 @@ import {
   VideoCameraOutlined,
   UploadOutlined
 } from '@ant-design/icons-vue'
+import '@/views/js-data-structures-algorithms'
 
 export default {
   data() {
