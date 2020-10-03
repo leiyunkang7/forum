@@ -18,4 +18,16 @@ export default class Set {
 
     return false
   }
+
+  delete(element: SetType) {
+    if (this.has(element)) {
+      delete this.items[element]
+      return true
+    }
+    return false
+  }
+
+  clear() {
+    this.items = {}
+  }
 }
