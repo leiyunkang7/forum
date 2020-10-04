@@ -75,4 +75,12 @@ export default class Set {
 
     return differenceSet
   }
+
+  isSubsetOf(otherSet: Set) {
+    if (this.size() > otherSet.size()) {
+      return false
+    }
+
+    return this.values().every(value => otherSet.has(value))
+  }
 }
