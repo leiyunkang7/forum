@@ -20,6 +20,14 @@ export default class Dictionary {
     }
     return false
   }
+
+  remove(key: any) {
+    if (this.hasKey(key)) {
+      delete this.table[this.toStrFn(key)]
+      return true
+    }
+    return false
+  }
 }
 
 class ValuePair {
