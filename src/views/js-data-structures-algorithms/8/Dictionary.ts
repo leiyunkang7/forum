@@ -2,7 +2,7 @@ import { defaultToString } from '../util'
 
 export default class Dictionary {
   toStrFn: (item: any) => string
-  table: Record<string, any>
+  table: Record<string, ValuePair>
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn
     this.table = {}
@@ -27,6 +27,11 @@ export default class Dictionary {
       return true
     }
     return false
+  }
+
+  get(key: any) {
+    const valuePair = this.table[this.toStrFn(key)]
+    return valuePair == null ? undefined : valuePair.value
   }
 }
 
