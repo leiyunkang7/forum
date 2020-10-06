@@ -1,5 +1,18 @@
 import { defaultToString } from '../util'
 
+class ValuePair {
+  key: any
+  value: any
+  constructor(key: any, value: any) {
+    this.key = key
+    this.value = value
+  }
+
+  toString() {
+    return `[#${this.key}: ${this.value}]`
+  }
+}
+
 export default class Dictionary {
   toStrFn: (item: any) => string
   table: Record<string, ValuePair>
@@ -46,9 +59,9 @@ export default class Dictionary {
     return this.keyValues().map(valuePair => valuePair.value)
   }
 
-  forEatch(callbackFn: (key: any, value: any) => boolean) {
+  forEach(callbackFn: (key: any, value: any) => boolean | void) {
     const valuePairs = this.keyValues()
-    for (let i = 0; i > valuePairs.length; i++) {
+    for (let i = 0; i < valuePairs.length; i++) {
       const { key, value } = valuePairs[i]
       const result = callbackFn(key, value)
 
@@ -81,18 +94,5 @@ export default class Dictionary {
       objString = `${objString},${valuePairs[i].toString()}`
     }
     return objString
-  }
-}
-
-class ValuePair {
-  key: any
-  value: any
-  constructor(key: any, value: any) {
-    this.key = key
-    this.value = value
-  }
-
-  toString() {
-    return `[#${this.key}: ${this.value}]`
   }
 }

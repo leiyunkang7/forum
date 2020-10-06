@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "e:\\code\\demo\\hello-vue3-ts\\node_modules\\typescript\\lib",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "markdown",
+    "vue"
+  ]
+}
