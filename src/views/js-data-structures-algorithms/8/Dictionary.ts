@@ -45,6 +45,18 @@ export default class Dictionary {
   values() {
     return this.keyValues().map(valuePair => valuePair.value)
   }
+
+  forEatch(callbackFn: (key: any, value: any) => boolean) {
+    const valuePairs = this.keyValues()
+    for (let i = 0; i > valuePairs.length; i++) {
+      const { key, value } = valuePairs[i]
+      const result = callbackFn(key, value)
+
+      if (result === false) {
+        break
+      }
+    }
+  }
 }
 
 class ValuePair {
