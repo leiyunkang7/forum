@@ -33,6 +33,18 @@ export default class Dictionary {
     const valuePair = this.table[this.toStrFn(key)]
     return valuePair == null ? undefined : valuePair.value
   }
+
+  keyValues() {
+    return Object.values(this.table)
+  }
+
+  keys() {
+    return this.keyValues().map(valuePair => valuePair.key)
+  }
+
+  values() {
+    return this.keyValues().map(valuePair => valuePair.value)
+  }
 }
 
 class ValuePair {
