@@ -1872,9 +1872,9 @@
   integrity sha1-QZvYWi69vU9Clj6YxaGxA0Uhdtk=
 
 "@vue/test-utils@^2.0.0-0":
-  version "2.0.0-beta.8"
-  resolved "https://registry.npm.taobao.org/@vue/test-utils/download/@vue/test-utils-2.0.0-beta.8.tgz#13be1a31f4d6d396e2a9d595d4e0f236421eba98"
-  integrity sha1-E74aMfTW05biqdWV1ODyNkIeupg=
+  version "2.0.0-beta.9"
+  resolved "https://registry.npm.taobao.org/@vue/test-utils/download/@vue/test-utils-2.0.0-beta.9.tgz?cache=0&sync_timestamp=1605002927661&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Ftest-utils%2Fdownload%2F%40vue%2Ftest-utils-2.0.0-beta.9.tgz#17a16967b12ce74e4615358c2bf43c33c79247d1"
+  integrity sha1-F6FpZ7Es505GFTWMK/Q8M8eSR9E=
 
 "@vue/web-component-wrapper@^1.2.0":
   version "1.2.0"
@@ -10520,9 +10520,9 @@ vue-loader@^15.9.2:
     vue-style-loader "^4.1.0"
 
 vue-router@^4.0.0-0:
-  version "4.0.0-rc.2"
-  resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.0-rc.2.tgz#8545cab76a05ca4f6dffbe6c6a671a4dbf585ab2"
-  integrity sha1-hUXKt2oFyk9t/75samcaTb9YWrI=
+  version "4.0.0-rc.3"
+  resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-4.0.0-rc.3.tgz?cache=0&sync_timestamp=1605352376400&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-router%2Fdownload%2Fvue-router-4.0.0-rc.3.tgz#70d18e90030bc6a25e81a30401d673223998ec6b"
+  integrity sha1-cNGOkAMLxqJegaMEAdZzIjmY7Gs=
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
